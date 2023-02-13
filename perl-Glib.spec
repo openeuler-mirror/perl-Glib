@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:           perl-Glib
 Version:        1.3293
-Release:        2
+Release:        3
 Summary:        Perl wrappers for the GLib utility and Object libraries
 License:        LGPL-2.1
 Group:          Development/Libraries
@@ -9,6 +9,8 @@ URL:            http://search.cpan.org/dist/Glib/
 Source0:        http://www.cpan.org/authors/id/X/XA/XAOC/Glib-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  glib2-devel perl-devel
+BuildRequires:  gcc
+BuildRequires:  perl-generators
 BuildRequires:  perl-ExtUtils-Depends >= 0.300
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl-ExtUtils-PkgConfig >= 1.000
@@ -82,6 +84,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*
 
 %changelog
+* Fri Feb 10 2023 lichaoran <pkwarcraft@hotmail.com> 1.3293-3
+- add buildRequires: add gcc as we using it to compile
+- and perl-generators to auto-generate perl module provides
+
 * Mon Jun 13 2022 peijiankang <peijiankang@kylinos.cn> 1.3293-2
 - remove %{dist} from spec file
 

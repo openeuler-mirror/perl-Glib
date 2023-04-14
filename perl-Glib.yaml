@@ -1,0 +1,4 @@
+version_control: github
+src_repo: mate-desktop/perl-Glib
+tag_prefix: "^v"
+separator: "."

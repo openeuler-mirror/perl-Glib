@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:           perl-Glib
 Version:        1.3293
-Release:        3
+Release:        4
 Summary:        Perl wrappers for the GLib utility and Object libraries
 License:        LGPL-2.1
 Group:          Development/Libraries
@@ -84,6 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*
 
 %changelog
+* Fri Apr 14 2023 yangxianzhao <yangxianzhao@uniontech.com> 1.3293-4
+- Add yaml
+
 * Fri Feb 10 2023 lichaoran <pkwarcraft@hotmail.com> 1.3293-3
 - add buildRequires: add gcc as we using it to compile
 - and perl-generators to auto-generate perl module provides
